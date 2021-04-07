@@ -10,9 +10,10 @@ defmodule RepoWeb.ReposViewTest do
   test "renders repos.json" do
     repos = build_list(2, :repo_info)
 
-    return = render(ReposView, "repos.json", repos: repos)
+    return = render(ReposView, "repos.json", repos: repos, new_token: "token123")
 
     assert %{
+             new_token: "token123",
              repos: [
                %RepoInfo{
                  id: 339_136_738,
@@ -31,6 +32,6 @@ defmodule RepoWeb.ReposViewTest do
                  stargazers_count: 1
                }
              ]
-           } = return
+           } == return
   end
 end
