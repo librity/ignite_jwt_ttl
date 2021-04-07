@@ -3,5 +3,6 @@ defmodule RepoWeb.ReposView do
 
   alias Github.RepoInfo
 
-  def render("repos.json", %{repos: [%RepoInfo{} | _tails] = repos}), do: %{repos: repos}
+  def render("repos.json", %{repos: [%RepoInfo{} | _tails] = repos, new_token: new_token}),
+    do: %{new_token: new_token, repos: repos}
 end

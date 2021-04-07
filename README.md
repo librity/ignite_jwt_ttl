@@ -95,6 +95,8 @@ Github client:
 ## Docs <a name = "docs"></a>
 
 - https://elixir-lang.org/crash-course.html
+- https://hexdocs.pm/guardian/Guardian.html#encode_and_sign/4
+- https://hexdocs.pm/guardian/Guardian.Token.Jwt.html#refresh/3
 
 ## Resources <a name = "resources"></a>
 

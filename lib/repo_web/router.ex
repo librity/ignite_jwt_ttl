@@ -7,6 +7,7 @@ defmodule RepoWeb.Router do
 
   pipeline :auth do
     plug RepoWeb.Auth.Pipeline
+    plug RepoWeb.Plugs.TokenRefresher
   end
 
   scope "/api", RepoWeb do

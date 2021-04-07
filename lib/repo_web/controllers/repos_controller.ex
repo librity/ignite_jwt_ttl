@@ -10,7 +10,7 @@ defmodule RepoWeb.ReposController do
     with {:ok, [%RepoInfo{} | _tails] = repos} <- get_github_client().get_user_repos(username) do
       conn
       |> put_status(:ok)
-      |> render("repos.json", repos: repos)
+      |> render("repos.json", repos: repos, new_token: conn.new_token)
     end
   end
 
